@@ -8,18 +8,13 @@ export const GifGrid = ({ category }) => {
   
     useEffect(() => {
         getGifs(category)
-            .then( setImages );
-
-        
-    }, [ category ]);
-
-       
+            .then( setImages );        
+    }, [ category ]);       
 
     return (
         <>
             <h3>{ category }</h3>
-            <div className="card-grid">       
-            
+            <div className="card-grid">         
                     {
                         images.map(img => (
                             < GifGridItem
@@ -27,8 +22,7 @@ export const GifGrid = ({ category }) => {
                                 { ...img }
                                                     
                             />    
-                        ))                       
-                                
+                        ))                                
                 }
                         
             </div>
